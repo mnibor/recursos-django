@@ -15,12 +15,8 @@ y nos devolverá la versión específica que está instalada. Teniendo en cuenta
 		python3 -m venv [NOMBRE DEL ENTORNO] 
 
 	Por ejemplo: 
-
-<<<<<<< HEAD
         python3 -m venv miEntornoVirtual
 
-=======
->>>>>>> 1f69277a3dc13534541f0cb859b9eceb95ba65bf
 2. **ACTIVAR ENTORNO VIRTUAL:** Para activar el entorno virtual en Windows, debo acceder al directorio donde se creó el entorno virtual e ingresar a la carpeta del mismo y dentro a la carpeta Scripts y allí ejecutar el archivo "activate.bat"
 	
 		source [NOMBRE DEL ENTORNO]\bin\activate
