@@ -16,49 +16,55 @@ Comandos que se ejecutan en la Terminal de Windows
 	Por ejemplo: Si el entorno virtual lo creamos en el escritorio de windows, del usuario que está logueado (supongamos que ese usuario se llama Carlos), la ruta será: c:\>Users\Carlos\Desktop\miEntornoVirtual\Scripts\activate.bat 
 	Luego de activarlo, la linea de comandos quedará de la siguiente forma: (miEntornoVirtual) c:\>Users\Carlos\Desktop\
 
-3. DESACTIVAR ENTORNO VIRTUAL: Para desactivar un entorno virtual, desde la linea de comandos basta con tipear "deactivate" no importa en qué directorio nos encontremos
+3. **DESACTIVAR ENTORNO VIRTUAL:** Para desactivar un entorno virtual, desde la linea de comandos basta con tipear "deactivate" no importa en qué directorio nos encontremos
 
-4. LISTADO DE TODAS LAS LIBRERIAS INSTALADAS EN EL ENTORNO VIRTUAL: Para averiguar qué librerías están instaladas en el entorno virtual basta con ejecutar cualquiera de estos dos comandos:
+4. **LISTADO DE TODAS LAS LIBRERIAS INSTALADAS EN EL ENTORNO VIRTUAL:** Para averiguar qué librerías están instaladas en el entorno virtual basta con ejecutar cualquiera de estos dos comandos:
 
-	pip list / pip freeze
+	   pip list / pip freeze
 
-5. GENERAR UN REGISTRO DE PAQUETES DEL PROYECTO: Es conveniente ir llevando un registro de los paquetes que va a necesitar el proyecto. Podemos hacerlo llevando un registro a mano de cada paquete y su version, pero podemos automatizarlo ejecutando el siguiente comando:
+5. **GENERAR UN REGISTRO DE PAQUETES DEL PROYECTO:** Es conveniente ir llevando un registro de los paquetes que va a necesitar el proyecto. Podemos hacerlo llevando un registro a mano de cada paquete y su version, pero podemos automatizarlo ejecutando el siguiente comando:
 
-	pip freeze > requirements.txt
+	   pip freeze > requirements.txt
 
 Esto generará un archivo con el nombre requirements.txt en el directorio donde nos encontremos en el momento de ejecutar el comando.
 
-6. INSTALAR PAQUETES DEPENDIENTES A TRAVES DE UN ARCHIVO REQUIREMENTS.TXT: Podemos instalar en un solo paso, todas las librerías que utiliza el proyecto, solamente si éste dispone de un archivo requirements.txt para eso, primero tenemos que tener activo el entorno virtual, y a continuación ejecutar:
+6. **INSTALAR PAQUETES DEPENDIENTES A TRAVES DE UN ARCHIVO REQUIREMENTS.TXT:** Podemos instalar en un solo paso, todas las librerías que utiliza el proyecto, solamente si éste dispone de un archivo requirements.txt para eso, primero tenemos que tener activo el entorno virtual, y a continuación ejecutar:
 
-	pip install -r requirements.txt
+	   pip install -r requirements.txt
 
-7. INSTALAR DJANGO EN EL ENTORNO VIRTUAL: Este comando instalará la última versión de Django disponible, teniendo en cuenta la versión de Python que tengamos instalada en el sistema.
+7. **INSTALAR DJANGO EN EL ENTORNO VIRTUAL:** Este comando instalará la última versión de Django disponible, teniendo en cuenta la versión de Python que tengamos instalada en el sistema.
 	
-	pip install django
+	   pip install django
 
-8. INSTALAR VERSION ESPECIFICA DE DJANGO: Para instalar una versión específica de Django, debemos ejecutar el siguiente comando
+8. **INSTALAR VERSION ESPECIFICA DE DJANGO:*** Para instalar una versión específica de Django, debemos ejecutar el siguiente comando
 
-	pip install django==3.2
+	   pip install django==3.2
 
-9. AVERIGUAR VERSION DE DJANGO INSTALADA: Existen varios caminos para averiguar la versión de Django instalada. Podemos optar por cualquiera de estos tres comandos. Los dos primeros, van a mostrar la version de Django, puntualmente. Las dos últimas, mostrarán todos los paquetes instalados, entre ellos, Django.
+9. **AVERIGUAR VERSION DE DJANGO INSTALADA:** Existen varios caminos para averiguar la versión de Django instalada. Podemos optar por cualquiera de estos tres comandos. Los dos primeros, van a mostrar la version de Django, puntualmente. Las dos últimas, mostrarán todos los paquetes instalados, entre ellos, Django.
 
-	django-admin --version
-	python -m django --version
-	pip freeze / pip list
+	   django-admin --version
+	   python -m django --version
+	   pip freeze / pip list
 
-10. DESINSTALAR CUALQUIER LIBRERIA DEL ENTORNO VIRTUAL (o global): Para desinstalar cualquier librería instalada en el entorno virtual basta ejectuar el siguiente comando, con el entorno virtual activado:
+10. **DESINSTALAR CUALQUIER LIBRERIA DEL ENTORNO VIRTUAL (o global):** Para desinstalar cualquier librería instalada en el entorno virtual basta ejectuar el siguiente comando, con el entorno virtual activado:
 	
-	pip uninstall [NOMBRE DE LA LIBRERIA]
+	   pip uninstall [NOMBRE DE LA LIBRERIA]
 
-	Por ejemplo: pip uninstall Django 
-	
-11. CREAR UN PROYECTO DE DJANGO: Con el entorno virtual activado, basta ejecutar el siguiente comando, teniendo en cuenta que los nombres de proyecto no deben contener espacios ni guiones medios. Si acepta guiones bajos:
+	Por ejemplo:
 
-	django-admin startproject [NOMBRE DEL PROYECTO]
+	   pip uninstall Django
 
-	Por ejemplo: django-admin startproject blogNoticias
 
-12. INICIAR EL PROYECTO INSTALADO: Es necesario tener el entorno virtual activado y estar dentro de la carpeta del proyecto, donde se encuentra el archivo manage.py. Allí ejecutamos el comando:
+11. **CREAR UN PROYECTO DE DJANGO:** Con el entorno virtual activado, basta ejecutar el siguiente comando, teniendo en cuenta que los nombres de proyecto no deben contener espacios ni guiones medios. Si acepta guiones bajos:
+
+	   django-admin startproject [NOMBRE DEL PROYECTO]
+
+	Por ejemplo:
+
+	   django-admin startproject blogNoticias
+
+
+12. **INICIAR EL PROYECTO INSTALADO:** Es necesario tener el entorno virtual activado y estar dentro de la carpeta del proyecto, donde se encuentra el archivo manage.py. Allí ejecutamos el comando:
 
 	python [NOMBRE DEL PROYECTO] runserver
 
