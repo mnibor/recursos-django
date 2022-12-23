@@ -1,13 +1,13 @@
 COMANDOS PARA WINDOWS
 Comandos que se ejecutan en la Terminal de Windows
 
-1. CREAR UN ENTORNO VIRTUAL: Existen varios comandos con los que podemos crear un entorno virtual sobre Windows. Quizás el más utilizado sea: 
+1. **CREAR UN ENTORNO VIRTUAL:** Existen varios comandos con los que podemos crear un entorno virtual sobre Windows. Quizás el más utilizado sea:
 	
 	python -m venv [NOMBRE DEL ENTORNO] 
 
 	Por ejemplo: python -m venv miEntornoVirtual
 
-2. ACTIVAR ENTORNO VIRTUAL: Para activar el entorno virtual en Windows, debo acceder al directorio donde se creó el entorno virtual e ingresar a la carpeta del mismo y dentro a la carpeta Scripts y allí ejecutar el archivo "activate.bat"
+2. **ACTIVAR ENTORNO VIRTUAL:** Para activar el entorno virtual en Windows, debo acceder al directorio donde se creó el entorno virtual e ingresar a la carpeta del mismo y dentro a la carpeta Scripts y allí ejecutar el archivo "activate.bat"
 	
 	c:\>[RUTA][NOMBRE DEL ENTORNO]\Scripts\activate.bat
 
