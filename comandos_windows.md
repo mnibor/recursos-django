@@ -34,70 +34,75 @@ Esto generará un archivo con el nombre requirements.txt en el directorio donde 
 
 7. **INSTALAR DJANGO EN EL ENTORNO VIRTUAL:** Este comando instalará la última versión de Django disponible, teniendo en cuenta la versión de Python que tengamos instalada en el sistema.
 	
-	   pip install django
+        pip install django
 
 8. **INSTALAR VERSION ESPECIFICA DE DJANGO:*** Para instalar una versión específica de Django, debemos ejecutar el siguiente comando
 
-	   pip install django==3.2
+        pip install django==3.2
 
 9. **AVERIGUAR VERSION DE DJANGO INSTALADA:** Existen varios caminos para averiguar la versión de Django instalada. Podemos optar por cualquiera de estos tres comandos. Los dos primeros, van a mostrar la version de Django, puntualmente. Las dos últimas, mostrarán todos los paquetes instalados, entre ellos, Django.
 
-	   django-admin --version
-	   python -m django --version
-	   pip freeze / pip list
+        django-admin --version
+        python -m django --version
+        pip freeze / pip list
 
 10. **DESINSTALAR CUALQUIER LIBRERIA DEL ENTORNO VIRTUAL (o global):** Para desinstalar cualquier librería instalada en el entorno virtual basta ejectuar el siguiente comando, con el entorno virtual activado:
 	
-	   pip uninstall [NOMBRE DE LA LIBRERIA]
+        pip uninstall [NOMBRE DE LA LIBRERIA]
 
 	Por ejemplo:
 
-	   pip uninstall Django
+        pip uninstall Django
 
 
 11. **CREAR UN PROYECTO DE DJANGO:** Con el entorno virtual activado, basta ejecutar el siguiente comando, teniendo en cuenta que los nombres de proyecto no deben contener espacios ni guiones medios. Si acepta guiones bajos:
 
-	   django-admin startproject [NOMBRE DEL PROYECTO]
+        django-admin startproject [NOMBRE DEL PROYECTO]
 
 	Por ejemplo:
 
-	   django-admin startproject blogNoticias
+        django-admin startproject blogNoticias
 
 
 12. **INICIAR EL PROYECTO INSTALADO:** Es necesario tener el entorno virtual activado y estar dentro de la carpeta del proyecto, donde se encuentra el archivo manage.py. Allí ejecutamos el comando:
 
-	python [NOMBRE DEL PROYECTO] runserver
+        python [NOMBRE DEL PROYECTO] runserver
 
-	Por ejemplo: python blogNoticias runserver
+	Por ejemplo:
+
+        python blogNoticias runserver
 
 Este comando ejecutará un servidor de pruebas de Django donde podremos desarrollar localmente nuestro proyecto.
 
-13. SALIR DEL SERVIDOR FUNCIONANDO: Para salir del servidor de pruebas de Django hay que dirigirse a la terminal o la consola de comandos donde se está ejecutando el servidor y ejecutar la secuencia de teclas:
+13. **SALIR DEL SERVIDOR FUNCIONANDO:** Para salir del servidor de pruebas de Django hay que dirigirse a la terminal o la consola de comandos donde se está ejecutando el servidor y ejecutar la secuencia de teclas:
 
-	CTRL + PAUSA
-	CTRL + C
+	   CTRL + PAUSA
+	   CTRL + C
 
-14. EJECUTAR LAS MIGRACIONES DESPUES DE CREAR EL PROYECTO: Este comando creará la tabla de usuarios del sistema
+14. **EJECUTAR LAS MIGRACIONES DESPUES DE CREAR EL PROYECTO:** Este comando creará la tabla de usuarios del sistema
 	
 	python manage.py migrate
 
-15. CREAR UNA APLICACION EN EL PROYECTO: Para crear una aplicación ejecutamos el comando:
+15. **CREAR UNA APLICACION EN EL PROYECTO:** Para crear una aplicación ejecutamos cualquiera de los dos comandos:
 
-	python manage.py startapp [NOMBRE DE APP]
+        python manage.py startapp [NOMBRE DE APP]
 
-	Por ejemplo: python manage.py startapp core
+        django-admin startapp [NOMBRE DE APP]
+
+	Por ejemplo:
+	    python manage.py startapp core
 
 Una vez creada la aplicación, hay que registrarla en el archivo settings.py en el apartado INSTALLED_APPS para que queden integradas al proyecto. Si no la registramos, Django no sabrá que existe la aplicación que creamos y todo lo que hagamos en ella, no va a impactar en el proyecto.
 
-16. CREAR UN SUPERUSUARIO ADMINISTRADOR: 
+16. **CREAR UN SUPERUSUARIO ADMINISTRADOR:**
 
-	python manage.py createsuperuser
+        python manage.py createsuperuser
 
 Luego de ejecutar este comando, nos aparecerá la posibilidad de definir un nombre de usuario al superusuario, su correo electrónico y la contraseña con la que accederemos a la parte administrativa del sistema.
 
-17. EJECUTAR LAS MIGRACIONES DESPUES DE CREAR MODELOS EN UNA APLICACION: Luego de crear una aplicación, quizás definamos modelos en dicha aplicación. Para que éstas queden alojadas en la base de datos, tenemos que ejecutar estos dos comandos de manjera secuencial:
+17. **EJECUTAR LAS MIGRACIONES DESPUES DE CREAR MODELOS EN UNA APLICACION:** Luego de crear una aplicación, quizás definamos modelos en dicha aplicación. Para que éstas queden alojadas en la base de datos, tenemos que ejecutar estos dos comandos de manjera secuencial:
 
-	python manage.py makemigrations [NOMBRE DE LA APLICACION]
-	python manage.py migrate [NOMBRE DE LA APLICACION]
+        python manage.py makemigrations [NOMBRE DE LA APLICACION]
+        python manage.py migrate [NOMBRE DE LA APLICACION]
 
 En ambos casos se puede omitir el nombre de la aplicación

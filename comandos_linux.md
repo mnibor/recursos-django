@@ -87,9 +87,11 @@ Este comando ejecutará un servidor de pruebas de Django donde podremos desarrol
 	
 	    python3 manage.py migrate
 
-15. **CREAR UNA APLICACION EN EL PROYECTO:** Para crear una aplicación ejecutamos el comando:
+15. **CREAR UNA APLICACION EN EL PROYECTO:** Para crear una aplicación ejecutamos cualquiera de los dos comandos:
 
 	    python3 manage.py startapp [NOMBRE DE APP]
+
+        django-admin startapp [NOMBRE DE APP]
 
 	    Por ejemplo: python3 manage.py startapp core
 
